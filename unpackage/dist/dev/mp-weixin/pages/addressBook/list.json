@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "通讯录",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "address-book": "../../components/addressBook/addressBook",
+    "uni-fab": "../../uni_modules/uni-fab/components/uni-fab/uni-fab",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more"
+  }
+}

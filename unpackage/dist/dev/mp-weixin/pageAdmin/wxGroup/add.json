@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新增微信群",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-upimage": "../../components/ss-upimage/ss-upimage",
+    "uni-data-picker": "../../uni_modules/uni-data-picker/components/uni-data-picker/uni-data-picker",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

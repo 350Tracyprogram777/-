@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-image": "../../components/ss-image/ss-image",
+    "uni-dateformat": "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat",
+    "media-one": "../../components/media-one/media-one",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

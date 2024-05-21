@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的闲置",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "second-shop": "../../../components/secondShop/secondShop",
+    "bottom-more": "../../../components/bottomMore/bottomMore",
+    "ss-two-alert": "../../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

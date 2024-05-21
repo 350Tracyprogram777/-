@@ -1,0 +1,33 @@
+
+.contentClass {
+	font-size: 28rpx;
+	line-height: 50rpx;
+}
+.qg {
+	background-color: orchid;
+	color: #fff;
+	border-radius: 0rpx 12rpx 0rpx 12rpx;
+	padding: 4rpx 10rpx;
+	font-size: 12px;
+}
+.zh {
+	background-color: #fec041;
+	color: #fff;
+	border-radius: 0rpx 12rpx 0rpx 12rpx;
+	padding: 4rpx 10rpx;
+	font-size: 12px;
+}
+.zs {
+	background-color: #30c648;
+	color: #fff;
+	border-radius: 0rpx 12rpx 0rpx 12rpx;
+	padding: 4rpx 10rpx;
+	font-size: 12px;
+}
+.ykj {
+	background-color: #e85f4b;
+	color: #fff;
+	border-radius: 0rpx 12rpx 0rpx 12rpx;
+	padding: 4rpx 10rpx;
+	font-size: 12px;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ss-image": "../ss-image/ss-image",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

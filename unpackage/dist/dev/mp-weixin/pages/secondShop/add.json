@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "发布二手",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-upimage": "../../components/ss-upimage/ss-upimage",
+    "uni-data-checkbox": "../../uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "ss-super-select-view": "../../uni_modules/ss-components/components/ss-superSelectView/ss-superSelectView",
+    "uni-data-select": "../../uni_modules/uni-data-select/components/uni-data-select/uni-data-select",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

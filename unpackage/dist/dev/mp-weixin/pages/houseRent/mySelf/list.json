@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的租售",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "house-rent": "../../../components/houseRent/houseRent",
+    "bottom-more": "../../../components/bottomMore/bottomMore",
+    "ss-two-alert": "../../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

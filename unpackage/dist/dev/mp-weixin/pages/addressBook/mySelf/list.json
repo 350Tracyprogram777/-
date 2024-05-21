@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "通讯录",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "address-book": "../../../components/addressBook/addressBook",
+    "bottom-more": "../../../components/bottomMore/bottomMore",
+    "uni-fab": "../../../uni_modules/uni-fab/components/uni-fab/uni-fab",
+    "ss-two-alert": "../../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

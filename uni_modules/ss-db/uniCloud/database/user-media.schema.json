@@ -1,0 +1,78 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"extname": {
+			"bsonType": "string",
+			"description": "后缀",
+			"title": "后缀"
+		},
+		"type": {
+			"bsonType": "string",
+			"description": "类型:通讯录,租房,'新闻资讯','二手市场','用户头像','资料库','微信群'",
+			"title": "类型"
+		},
+		"fileID": {
+			"bsonType": "string",
+			"description": "fileID",
+			"title": "fileID"
+		},
+		"fileType": {
+			"bsonType": "string",
+			"description": "image.video,file",
+			"title": "fileType"
+		},
+		"name": {
+			"bsonType": "string",
+			"description": "name",
+			"title": "文件名"
+		},
+		"rename": {
+			"bsonType": "string",
+			"description": "rename",
+			"title": "重命名"
+		},
+		"path": {
+			"bsonType": "string",
+			"description": "文件地址本地上传地址",
+			"title": "文件地址"
+		},
+		"size": {
+			"bsonType": "int",
+			"description": "文件地址本地上传地址",
+			"title": "文件大小"
+		},
+		"url": {
+			"bsonType": "string",
+			"description": "上传成功后的地址",
+			"title": "图片地址"
+		},
+		"trace_id": {
+			"bsonType": "string",
+			"description": "内容安全的图片检测",
+			"title": "媒体检查id"
+		},
+		"image": {
+			"bsonType": "object",
+			"description": "图片信息 {width:90,height:90,location:''}",
+			"title": "图片信息"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}

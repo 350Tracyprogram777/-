@@ -1,0 +1,8 @@
+
+page {
+	background-color: #fff;
+}
+.label {
+	width: 160rpx;
+	color: #666;
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "群资料",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-top-tabar": "../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "ss-two-alert": "../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

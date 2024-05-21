@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "新增资料",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-upimage": "../components/ss-upimage/ss-upimage",
+    "uni-data-picker": "../uni_modules/uni-data-picker/components/uni-data-picker/uni-data-picker",
+    "uni-icons": "../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "ss-two-alert": "../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

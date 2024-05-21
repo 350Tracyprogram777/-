@@ -1,0 +1,111 @@
+{
+  "pages": [
+    "pages/tabar/main",
+    "pages/houseRent/list",
+    "pages/houseRent/add",
+    "pages/houseRent/detail",
+    "pages/manager/community/list",
+    "pages/manager/community/add",
+    "pages/addressBook/add",
+    "pages/addressBook/list",
+    "pages/addressBook/detail",
+    "pages/photos/list",
+    "pages/tabar/mine",
+    "pages/login/login",
+    "pages/login/bindPhone",
+    "pages/houseRent/mySelf/list",
+    "pages/addressBook/mySelf/list",
+    "pages/manager/community/desc",
+    "pages/newsArticle/webUrl",
+    "pages/newsArticle/add",
+    "pages/newsArticle/detail",
+    "pages/newsArticle/mySelf/list",
+    "pages/collect/list",
+    "pages/set/set",
+    "pages/set/userInfo",
+    "pages/set/ceshi",
+    "pages/newsArticle/selectAddressBook/selectAddressBook",
+    "pages/secondShop/list",
+    "pages/secondShop/add",
+    "pages/secondShop/mySelf/list",
+    "pages/secondShop/detail",
+    "pages/set/about"
+  ],
+  "subPackages": [
+    {
+      "root": "pageDoc",
+      "pages": [
+        "list",
+        "detail",
+        "add",
+        "mySelf/list",
+        "class",
+        "wxGroupDetail"
+      ]
+    },
+    {
+      "root": "pageAdmin",
+      "pages": [
+        "addressBook/list",
+        "houseRent/list",
+        "newsArticle/list",
+        "index",
+        "category/category",
+        "user/user",
+        "user/setUser",
+        "userDoc/list",
+        "secondShop/list",
+        "wxGroup/list",
+        "wxGroup/add",
+        "category/selectWxGroup"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#C0C4CC",
+    "selectedColor": "#FF944D",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tabar/main",
+        "iconPath": "static/tabar/ic_tab_home_n.png",
+        "selectedIconPath": "static/tabar/ic_tab_home_p.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/secondShop/list",
+        "iconPath": "static/tabar/ic_tab_shequ_n.png",
+        "selectedIconPath": "static/tabar/ic_tab_shequ_p.png",
+        "text": "闲置"
+      },
+      {
+        "pagePath": "pages/houseRent/list",
+        "iconPath": "static/tabar/tj-n.png",
+        "selectedIconPath": "static/tabar/tj-s.png",
+        "text": "房屋出租"
+      },
+      {
+        "pagePath": "pages/tabar/mine",
+        "iconPath": "static/tabar/ic_tab_wode_n.png",
+        "selectedIconPath": "static/tabar/ic_tab_wode_p.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置信息"
+    }
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation"
+  ],
+  "usingComponents": {}
+}

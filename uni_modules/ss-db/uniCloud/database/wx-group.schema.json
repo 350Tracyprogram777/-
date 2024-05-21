@@ -1,0 +1,129 @@
+{
+	"bsonType": "object",
+	"required": ["user_id", "title", "content"],
+	"permission": {
+		"read": "doc.user_id == auth.uid && doc.article_status == 0 || doc.article_status == 1",
+		"create": "auth.uid != null",
+		"update": "doc.user_id == auth.uid",
+		"delete": "doc.user_id == auth.uid"
+	},
+	"properties": {
+		"_id": {
+			"description": "存储文档 ID（用户 ID），系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "文章作者ID， 参考`uni-id-users` 表",
+			"foreignKey": "uni-id-users._id",
+			"defaultValue": {
+				"$env": "uid"
+			}
+		},
+		"sys_msg": {
+			"bsonType": "string",
+			"title": "系统信息",
+			"defaultValue": "",
+			"description": ""
+		},
+		"opengid": {
+			"bsonType": "string",
+			"title": "群ID",
+			"defaultValue": "",
+			"description": ""
+		},
+		"category_id": {
+			"bsonType": "string",
+			"title": "分类",
+			"description": "分类 id，参考`uni-news-categories`表",
+			"foreignKey": "sys-category._id",
+			"enum": {
+				"collection": "sys-category",
+				"field": "name as text, _id as value"
+			}
+		},
+		"name": {
+			"bsonType": "string",
+			"title": "群名字",
+			"description": "群名字",
+			"label": "群名字",
+			"trim": "both"
+		},
+		"group_owner_wx": {
+			"bsonType": "string",
+			"title": "群主微信",
+			"description": "群主微信,方便其他人添加",
+			"label": "群主微信",
+			"trim": "both"
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "群说明",
+			"description": "群说明",
+			"label": "群说明",
+			"trim": "right"
+		},
+		"state": {
+			"bsonType": "int",
+			"title": "文章状态",
+			"description": "文章状态：0 已发布 1 已删除",
+			"defaultValue": 0,
+			"enum": [{
+				"value": 0,
+				"text": "已发布"
+			}, {
+				"value": 1,
+				"text": "已删除"
+			}, {
+				"value": 30,
+				"text": "内容违规"
+			}]
+		},
+
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "排序",
+			"defaultValue": 1000
+		},
+		"images": {
+			"bsonType": "array",
+			"title": "图片",
+			"componentForEdit": {
+				"name": "ss-upimage",
+				"props": {
+					"type": "资料库",
+					":oneImg": true,
+					"maxCount": 9,
+					"style": "width:100px;height:100px"
+				}
+			},
+			"componentForShow": {
+				"name": "ss-upimage",
+				"props": {
+					":stopDelete": true,
+					"type": "资料库",
+					":oneImg": true,
+					"maxCount": 9,
+					"v-model:mediaArr": "formData.images",
+					"style": "width:100px;height:100px"
+				}
+			}
+		},
+		"cover": {
+			"bsonType": "string",
+			"title": "封面大图",
+			"description": "缩略图地址",
+			"label": "封面大图",
+			"trim": "both"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"title": "发表时间",
+			"description": "发表时间",
+			"defaultValue": {
+				"$env": "now"
+			}
+		}
+
+	}
+}

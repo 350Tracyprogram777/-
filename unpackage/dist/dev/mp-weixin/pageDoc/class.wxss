@@ -1,0 +1,39 @@
+
+page {
+	padding: 15px;
+}
+.classView {
+	position: relative;
+	width: 300rpx;
+	height: 300rpx;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.classText {
+	color: #000;
+	font-size: 40rpx;
+	font-weight: bold;
+	position: relative;
+	margin-top: 55rpx;
+}
+.bgImg {
+	position: absolute;
+	left: 0rpx;
+	right: 0rpx;
+	top: 0rpx;
+	bottom: 0rpx;
+	width: 300rpx;
+	height: 300rpx;
+}
+.bottomView {
+	position: absolute;
+	right: 0rpx;
+	bottom: 0rpx;
+	border-top-left-radius: 30rpx;
+	border-bottom-right-radius: 25rpx;
+	background-color: orange;
+	padding: 4px 40rpx;
+	font-weight: bold;
+}

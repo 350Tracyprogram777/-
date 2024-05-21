@@ -1,0 +1,70 @@
+
+.delectImg {
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	position: absolute;
+	top: 5rpx;
+	right: 5rpx;
+	background-color: #aaa;
+	color: #ffffff;
+	font-size: 26rpx;
+	text-align: center;
+
+	border-radius: 7.5px;
+}
+.waingImg {
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	position: absolute;
+	top: 5rpx;
+	left: 5rpx;
+	font-size: 26rpx;
+	text-align: center;
+}
+.coverImg {
+	width: 30px;
+	height: 15px;
+	line-height: 15px;
+	position: absolute;
+	top: 5rpx;
+	left: 5rpx;
+	font-size: 20rpx;
+
+	background-color: #388afa;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+.videoImg {
+	position: absolute;
+
+	font-size: 30px;
+	border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+.dateText {
+	position: absolute;
+	bottom: 0rpx;
+	right: 0px;
+	left: 0rpx;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+	text-align: center;
+	display: flexbox;
+	padding: 3rpx 0rpx;
+	font-size: 10px;
+}
+/* 文件名字 */
+.oneText {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	background-color: #eee;
+	border-radius: 6px;
+	font-size: 20rpx;
+	color: #999;
+}

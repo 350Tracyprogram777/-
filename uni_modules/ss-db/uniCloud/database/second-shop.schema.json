@@ -1,0 +1,222 @@
+{
+	"bsonType": "object",
+	"required": ["user_id", "title", "content"],
+	"permission": {
+		"read": "doc.user_id == auth.uid && doc.article_status == 0 || doc.article_status == 1",
+		"create": "auth.uid != null",
+		"update": "doc.user_id == auth.uid",
+		"delete": "doc.user_id == auth.uid"
+	},
+	"properties": {
+		"_id": {
+			"description": "存储文档 ID（用户 ID），系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "文章作者ID， 参考`uni-id-users` 表",
+			"foreignKey": "uni-id-users._id",
+			"defaultValue": {
+				"$env": "uid"
+			}
+		},
+		"sys_msg": {
+			"bsonType": "string",
+			"title": "系统信息",
+			"defaultValue": "",
+			"description": ""
+		},
+		"community_id": {
+			"bsonType": "string",
+			"title": "小区id",
+			"description": "小区id",
+			"foreignKey": "community._id"
+		},
+		"category_id": {
+			"bsonType": "string",
+			"title": "分类",
+			"description": "分类 id，参考`uni-news-categories`表",
+			"foreignKey": "sys-category._id",
+			"enum": {
+				"collection": "sys-category",
+				"field": "name as text, _id as value"
+			}
+		},
+		"title": {
+			"bsonType": "string",
+			"title": "标题",
+			"description": "标题",
+			"label": "标题",
+			"trim": "both"
+		},
+		"content": {
+			"bsonType": "string",
+			"title": "文章内容",
+			"description": "文章内容",
+			"label": "文章内容",
+			"trim": "right"
+		},
+		"price": {
+			"bsonType": "string",
+			"title": "一口价",
+			"description": "一口价",
+			"label": "一口价",
+			"trim": "right"
+		},
+		"address": {
+			"bsonType": "sting",
+			"title": "",
+			"description": "地址详情"
+		},
+		"address_name": {
+			"bsonType": "sting",
+			"title": "",
+			"description": "地址名字"
+		},
+		"address_book_id": {
+			"bsonType": "string",
+			"description": "关联通讯录id， 参考`uni-id-users` 表",
+			"foreignKey": "address-book._id"
+		},
+		"replacement": {
+			"bsonType": "object",
+			"description": "置换",
+			"properties": {
+				"open": {
+					"bsonType": "bool",
+					"description": "置换",
+					"defaultValue": false
+				},
+				"content": {
+					"bsonType": "string",
+					"description": "想置换的东西",
+					"defaultValue": ""
+				}
+			},
+			"defaultValue": {
+				"open": 0,
+				"content": ''
+			}
+		},
+		"gps": {
+			"bsonType": "",
+			"description": "出发地经纬度",
+			"properties": {
+				"latitude": {
+					"bsonType": "string",
+					"description": "经度"
+				},
+				"longitude": {
+					"bsonType": "string",
+					"description": "纬度"
+				}
+			},
+			"defaultValue": {
+				"latitude": 0,
+				"longitude": 0
+			}
+		},
+		"trade_type": {
+			"bsonType": "int",
+			"title": "发货方式",
+			"description": "商品状态：0 包邮 1 自提",
+			"defaultValue": 0,
+			"enum": [{
+				"value": 0,
+				"text": "包邮"
+			}, {
+				"value": 1,
+				"text": "自提"
+			}]
+		},
+		"state": {
+			"bsonType": "int",
+			"title": "商品状态",
+			"description": "商品状态：0 已发布 1 已删除",
+			"defaultValue": 0,
+			"enum": [{
+				"value": 0,
+				"text": "出售中"
+			}, {
+				"value": 1,
+				"text": "已售出"
+			}, {
+				"value": 2,
+				"text": "暂停销售"
+			}, {
+				"value": 30,
+				"text": "内容违规"
+			}]
+		},
+		"like_count": {
+			"bsonType": "int",
+			"description": "想要",
+			"permission": {
+				"write": false
+			}
+		},
+		"is_sticky": {
+			"bsonType": "bool",
+			"title": "是否置顶",
+			"description": "是否置顶",
+			"permission": {
+				"write": false
+			}
+		},
+		"tags": {
+			"bsonType": "array",
+			"title": "标签",
+			"description": "二手标签"
+		},
+		"images": {
+			"bsonType": "array",
+			"title": "图片",
+			"componentForEdit": {
+				"name": "ss-upimage",
+				"props": {
+					"type": "二手市场",
+					":oneImg": true,
+					"maxCount": 1,
+					"style": "width:100px;height:100px"
+				}
+			},
+			"componentForShow": {
+				"name": "ss-upimage",
+				"props": {
+					":stopDelete": true,
+					"type": "二手市场",
+					":oneImg": true,
+					"maxCount": 1,
+					"v-model:mediaArr": "formData.images",
+					"style": "width:100px;height:100px"
+				}
+			}
+		},
+		"cover": {
+			"bsonType": "string",
+			"title": "封面大图",
+			"description": "缩略图地址",
+			"label": "封面大图",
+			"trim": "both"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"title": "发表时间",
+			"description": "发表时间",
+			"defaultValue": {
+				"$env": "now"
+			}
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "排序",
+			"defaultValue": 1000
+		},
+		"model": {
+			"bsonType": "int",
+			"title": "租售方式",
+			"description": "租售方式,0出售 1求购",
+			"defaultValue": 0
+		}
+	}
+}

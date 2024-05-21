@@ -1,0 +1,342 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"rent_pay_cycle":{
+			"bsonType": "string",
+			"title": "租房付款方式",
+			"description": "押一付三,押一付六"
+		},
+		"sall_pay_cycle":{
+			"bsonType": "string",
+			"title": "卖房付款方式",
+			"defaultValue":"全款/可按揭"
+		},
+		"sall_rent_type": {
+			"bsonType": "int",
+			"title": "租售",
+			"description": "出租",
+			"enum": [{
+				"text": "出租",
+				"value": 0
+			}, {
+				"text": "出售",
+				"value": 1
+			}]
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "排序",
+			"defaultValue":1000
+		},
+		"main_room_type": {
+			"bsonType": "int",
+			"title": "主/次卧",
+			"description": "",
+			"enum": [{
+				"text": "主卧",
+				"value": 0
+			}, {
+				"text": "次卧",
+				"value": 1
+			}]
+		},
+		"rent_duration_type": {
+			"bsonType": "int",
+			"title": "可租时长",
+			"description": "出租",
+			"enum": [{
+				"text": "短租",
+				"value": 0
+			}, {
+				"text": "长租",
+				"value": 1
+			}]
+		},
+		"life_type": {
+			"bsonType": "int",
+			"title": "水电煤",
+			"description": "水电煤",
+			"enum": [{
+				"text": "民用",
+				"value": 0
+			}, {
+				"text": "商业",
+				"value": 1
+			}]
+		},
+		"rent_duration": {
+			"bsonType": "string",
+			"title": "可租时长",
+			"description": "出租"
+		},
+		"house_class": {
+			"bsonType": "int",
+			"title": "户型类型",
+			"description": "暂未使用",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "住宅",
+				"value": 0
+			}, {
+				"text": "大平层",
+				"value": 1
+			}, {
+				"text": "商铺",
+				"value": 2
+			}, {
+				"text": "别墅",
+				"value": 3
+			}]
+		},
+		"address": {
+			"bsonType": "sting",
+			"title": "",
+			"description": "出发地"
+		},
+		"address_name": {
+			"bsonType": "sting",
+			"title": "",
+			"description": "地址名字"
+		},
+		"gps": {
+			"bsonType": "",
+			"description": "出发地经纬度",
+			"properties": {
+				"latitude": {
+					"bsonType": "string",
+					"description": "经度"
+				},
+				"longitude": {
+					"bsonType": "string",
+					"description": "纬度"
+				}
+			}
+		},
+		"build": {
+			"bsonType": "string",
+			"title": "几栋",
+			"description": "几栋"
+		},
+		"unit": {
+			"bsonType": "string",
+			"title": "几单元",
+			"description": "几单元"
+		},
+		"number": {
+			"bsonType": "string",
+			"title": "门牌号",
+			"description": "门牌号",
+			"defaultValue": "0"
+		},
+		"floor": {
+			"bsonType": "string",
+			"title": "楼层",
+			"description": "所在楼层",
+			"defaultValue": "0"
+		},
+		"total_floor": {
+			"bsonType": "string",
+			"title": "楼高",
+			"description": "楼高",
+			"defaultValue": "26"
+		},
+		"rent_type": {
+			"bsonType": "int",
+			"title": "出租类型",
+			"description": "最大座位数",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "整租",
+				"value": 0
+			}, {
+				"text": "合租",
+				"value": 1
+			}]
+		},
+		"area": {
+			"bsonType": "string",
+			"title": "房屋面积",
+			"description": "房屋面积"
+		},
+		"toward": {
+			"bsonType": "int",
+			"title": "房屋朝向",
+			"description": "房屋面积",
+			"defaultValue": 2,
+			"enum": [{
+					"text": "东",
+					"value": 0
+				}, {
+					"text": "西",
+					"value": 1
+				}, {
+					"text": "南",
+					"value": 2
+				}, {
+					"text": "北",
+					"value": 3
+				}
+			},
+			"house_set": {
+				"bsonType": "array",
+				"title": "房屋配套",
+				"description": "房屋配套"
+			},
+			"house_type_room": {
+				"bsonType": "string",
+				"title": "几室",
+				"description": "房屋配套",
+				"defaultValue": 3
+			},
+			"house_type_play": {
+				"bsonType": "string",
+				"title": "几厅",
+				"description": "房屋配套",
+				"defaultValue": 1
+			},
+			"house_type_toilet": {
+				"bsonType": "string",
+				"title": "几卫",
+				"description": "房屋配套",
+				"defaultValue": 1
+			},
+			"elevator": {
+				"bsonType": "string",
+				"title": "电梯",
+				"description": "几梯几户的梯",
+				"defaultValue": 2
+			},
+			"family": {
+				"bsonType": "string",
+				"title": "几户",
+				"description": "几梯几户的户",
+				"defaultValue": 4
+			},
+			"repair_mode": {
+				"bsonType": "int",
+				"title": "装修精度",
+				"description": "",
+				"defaultValue": "0"
+				"enum": [{
+					"text": "精装",
+					"value": 2
+				}, {
+					"text": "简装",
+					"value": 1
+				}, {
+					"text": "毛坯",
+					"value": 0
+				}]
+			},
+			"rant_price": {
+				"bsonType": "string",
+				"title": "租金",
+				"description": "租金(每月)",
+				"defaultValue": "0"
+			},
+			"create_date": {
+				"bsonType": "timestamp",
+				"description": "发布时间"
+			},
+			"remark": {
+				"bsonType": "string",
+				"title": "备注",
+				"description": "备注"
+			},
+			"user_id": {
+				"bsonType": "string",
+				"title": "用户id",
+				"description": "用户id",
+				"foreignKey": "uni-id-users._id"
+			},
+			"strata_fee": {
+				"bsonType": "string",
+				"title": "物业费",
+				"description": "物业费",
+				"defaultValue": "0"
+			},
+			"price": {
+				"bsonType": "string",
+				"title": "价格",
+				"description": "价格",
+				"defaultValue": "0"
+			},
+			"have_car": {
+				"bsonType": "int",
+				"title": "是否有车位",
+				"description": "是否有车位",
+				"defaultValue": 0,
+				"enum": [{
+					"text": "无",
+					"value": 0
+				}, {
+					"text": "有",
+					"value": 1
+				}]
+			},
+			"car_price": {
+				"bsonType": "string",
+				"title": "车位费",
+				"description": "车位费",
+				"defaultValue": "0"
+			},
+			"cover": {
+				"bsonType": "string",
+				"title": "封面",
+				"description": "车位费",
+				"defaultValue": "0"
+			},
+			"images": {
+				"bsonType": "array",
+				"title": "房屋图片",
+				"description": ""
+			},
+			"phone": {
+				"bsonType": "string",
+				"title": "联系电话",
+				"description": ""
+			},
+			"contacts": {
+				"bsonType": "string",
+				"title": "联系人",
+				"description": ""
+			},
+			"sys_msg": {
+				"bsonType": "string",
+				"title": "系统信息",
+				"defaultValue": "",
+				"description": "停止出租,审核拒绝的备注信息"
+			}
+			"state": {
+				"bsonType": "int",
+				"title": "租售状态",
+				"description": "",
+				"defaultValue": 0,
+				"enum": [{
+					"text": "出租/售中",
+					"value": 0
+				}, {
+					"text": "已出租",
+					"value": 1
+				}, {
+					"text": "停止租售",
+					"value": 2
+				}, {
+					"text": "审核未通过",
+					"value": 30
+				}]
+			}
+		}
+	}

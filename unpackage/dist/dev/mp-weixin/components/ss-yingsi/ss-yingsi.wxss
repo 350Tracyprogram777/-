@@ -1,0 +1,35 @@
+
+.superview {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0rpx;
+	bottom: 0rpx;
+	background: rgba(0, 0, 0, 0.4);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.twobt-cancle {
+	flex-grow: 1;
+	height: 80rpx;
+	border-radius: 40rpx;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	line-height: 80rpx;
+	background-color: #aaa;
+	border-radius: 8rpx;
+	margin-right: 10rpx;
+}
+.twobt-sure {
+	flex-grow: 1;
+	margin-left: 10rpx;
+
+	height: 80rpx;
+	border-radius: 40rpx;
+	text-align: center;
+	color: #fff;
+	line-height: 80rpx;
+	border-radius: 8rpx;
+}

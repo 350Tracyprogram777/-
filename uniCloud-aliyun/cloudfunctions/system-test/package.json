@@ -1,0 +1,7 @@
+{
+  "name": "system-test",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的帖子",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "news-one": "../../../components/newsOne/newsOne",
+    "bottom-more": "../../../components/bottomMore/bottomMore",
+    "ss-two-alert": "../../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

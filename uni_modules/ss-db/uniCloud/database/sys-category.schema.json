@@ -1,0 +1,135 @@
+{
+	"bsonType": "object",
+	"required": ["name"],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "存储文档 ID（文章 ID），系统自动生成"
+		},
+		"type": {
+			"bsonType": "int",
+			"title": "类型",
+			"description": "文章状态：0 已发布 1 已删除",
+			"defaultValue": 0,
+			"enum": [{
+				"value": 0,
+				"text": "房屋出租"
+			}, {
+				"value": 1,
+				"text": "通讯录"
+			}, {
+				"value": 2,
+				"text": "新闻资讯"
+			}, {
+				"value": 3,
+				"text": "二手市场"
+			}, {
+				"value": 4,
+				"text": "资料库"
+			}, {
+				"value": 100,
+				"text": "微信群"
+			}]
+		},
+		"role": {
+			"bsonType": "array",
+			"description": "用户角色",
+			"enum": {
+				"collection": "uni-id-roles",
+				"field": "role_id as value, role_name as text"
+			},
+			"foreignKey": "uni-id-roles.role_id",
+			"permission": {
+				"write": false
+			},
+			"title": "角色"
+		},
+		"name": {
+			"bsonType": "string",
+			"description": "类别名称",
+			"label": "名称",
+			"trim": "both"
+		},
+		"images": {
+			"bsonType": "array",
+			"title": "图片",
+			"componentForEdit": {
+				"name": "ss-upimage",
+				"props": {
+					"type": "分类",
+					":oneImg": true,
+					"maxCount": 1,
+					"style": "width:100px;height:100px"
+				}
+			},
+			"componentForShow": {
+				"name": "ss-upimage",
+				"props": {
+					":stopDelete": true,
+					"type": "分类",
+					":oneImg": true,
+					"maxCount": 1,
+					"v-model:mediaArr": "formData.images",
+					"style": "width:100px;height:100px"
+				}
+			}
+		},
+		"cover": {
+			"bsonType": "string",
+			"description": "类别图标地址",
+			"label": "图标地址"
+		},
+		"sort": {
+			"bsonType": "int",
+			"description": "类别显示顺序",
+			"label": "排序"
+		},
+		"state": {
+			"bsonType": "int",
+			"title": "状态",
+			"description": "状态：0 正常 1 暂停",
+			"defaultValue": 0,
+			"enum": [{
+				"value": 0,
+				"text": "正常"
+			}, {
+				"value": 1,
+				"text": "暂停"
+			}]
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"role": {
+			"bsonType": "array",
+			"description": "用户角色",
+			"enum": {
+				"collection": "uni-id-roles",
+				"field": "role_id as value, role_name as text"
+			},
+			"foreignKey": "uni-id-roles.role_id",
+			"defaultValue": ["user"],
+			"title": "角色"
+		},
+		"wx_group": {
+			"bsonType": "array",
+			"description": "微信圈",
+			"enum": {
+				"name": "", //群名称
+				"opengid": "" //群id
+			},
+			"title": "微信群"
+		}
+
+	},
+	"version": "0.0.1"
+}

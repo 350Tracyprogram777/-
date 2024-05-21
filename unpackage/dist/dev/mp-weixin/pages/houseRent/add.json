@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "我要出租",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-data-checkbox": "../../uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox",
+    "uni-combox": "../../uni_modules/uni-combox/components/uni-combox/uni-combox",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "ss-upimage": "../../components/ss-upimage/ss-upimage",
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

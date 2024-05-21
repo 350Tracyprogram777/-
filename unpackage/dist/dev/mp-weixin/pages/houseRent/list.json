@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "租房列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "house-rent": "../../components/houseRent/houseRent",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "uni-fab": "../../uni_modules/uni-fab/components/uni-fab/uni-fab"
+  }
+}

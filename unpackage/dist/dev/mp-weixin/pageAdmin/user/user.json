@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "用户管理",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar"
+  }
+}

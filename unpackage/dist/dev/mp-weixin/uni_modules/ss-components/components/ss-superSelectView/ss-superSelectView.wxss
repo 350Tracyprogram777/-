@@ -1,0 +1,17 @@
+
+.selectItem-s {
+	background-color: #ebf9ea;
+	padding: 20rpx 10rpx;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #6bda82;
+	text-align: center;
+}
+.selectItem-n {
+	background-color: #f7f7f7;
+	padding: 20rpx 10rpx;
+	border-radius: 5px;
+	font-size: 15px;
+	text-align: center;
+	color: #333;
+}

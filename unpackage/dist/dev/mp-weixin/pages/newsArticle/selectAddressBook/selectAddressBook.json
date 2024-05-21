@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "选择联系方式",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-icons": "../../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "address-book": "../../../components/addressBook/addressBook",
+    "bottom-more": "../../../components/bottomMore/bottomMore"
+  }
+}

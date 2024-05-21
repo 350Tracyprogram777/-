@@ -1,0 +1,1 @@
+<view><official-account binderror="{{a}}" bindload="{{b}}"></official-account></view>

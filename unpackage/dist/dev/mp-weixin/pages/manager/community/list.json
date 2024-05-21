@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "社区认领",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "uni-dateformat": "../../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat"
+  }
+}

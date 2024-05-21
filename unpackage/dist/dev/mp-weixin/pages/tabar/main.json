@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "家在龙兴嘉苑2号院",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "news-one": "../../components/newsOne/newsOne",
+    "bottom-more": "../../components/bottomMore/bottomMore",
+    "uni-fab": "../../uni_modules/uni-fab/components/uni-fab/uni-fab"
+  }
+}

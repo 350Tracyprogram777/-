@@ -1,0 +1,58 @@
+{
+	"bsonType": "object",
+	"required": ["user_id", "article_id"],
+	"permission": {
+		"read": true,
+		"create": "auth.uid != null",
+		"update": false,
+		"delete": "doc.user_id == auth.uid"
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"uni_id": {
+			"bsonType": "string",
+			"description": "",
+			"title": "关联id"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "点赞id，参考uni-id-users表",
+			"forceDefaultValue": {
+				"$env": "uid"
+			},
+			"foreignKey": "uni-id-users._id"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "收藏时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"class": {
+			"bsonType": "int",
+			"title": "分类",
+			"description": "",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "房屋租售",
+				"value": 0
+			}, {
+				"text": "通讯录",
+				"value": 1
+			}, {
+				"text": "新闻",
+				"value": 2
+			}, {
+				"text": "二手市场",
+				"value": 3
+			},{
+				"text": "资料库",
+				"value": 4
+			}]
+		}
+	},
+	"version": "0.0.1"
+}

@@ -1,0 +1,1 @@
+<view><web-view src="{{a}}" style="width:750rpx;height:auto"></web-view></view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "选择群",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "weixin-group": "../../components/wxGroup/wxGroup",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more"
+  }
+}

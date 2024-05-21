@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "二手闲置",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "second-shop": "../../components/secondShop/secondShop",
+    "bottom-more": "../../components/bottomMore/bottomMore",
+    "uni-fab": "../../uni_modules/uni-fab/components/uni-fab/uni-fab"
+  }
+}

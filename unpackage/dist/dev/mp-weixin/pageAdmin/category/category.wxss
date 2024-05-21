@@ -1,0 +1,11 @@
+
+.label {
+	width: 160rpx;
+}
+.inputclass {
+	height: 78rpx;
+	border: 1rpx solid #eee;
+	border-radius: 10rpx;
+	padding: 0rpx 20rpx;
+	flex-grow: 1;
+}

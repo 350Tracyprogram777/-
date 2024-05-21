@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ss-top-tabar": "../../uni_modules/ss-components/components/ss-topTabar/ss-topTabar",
+    "address-book": "../../components/addressBook/addressBook",
+    "bottom-more": "../../components/bottomMore/bottomMore",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert"
+  }
+}

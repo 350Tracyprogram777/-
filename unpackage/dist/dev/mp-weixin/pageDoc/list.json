@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "资料库",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "doc-file": "../components/docFile/docFile",
+    "bottom-more": "../components/bottomMore/bottomMore",
+    "uni-fab": "../uni_modules/uni-fab/components/uni-fab/uni-fab"
+  }
+}

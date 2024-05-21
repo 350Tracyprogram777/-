@@ -1,0 +1,1 @@
+<view class="" style="border-radius:inherit"><image src="{{a}}" style="{{'background-color:#fafafa;border-radius:inherit' + ';' + ('width:' + b + ';' + ('height:' + c))}}"></image></view>

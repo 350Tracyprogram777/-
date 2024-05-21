@@ -1,0 +1,1 @@
+<view><doc-file wx:if="{{e}}" bindreport="{{a}}" bindshare="{{b}}" bindzan="{{c}}" bindcollect="{{d}}" u-i="904701f2-0" bind:__l="__l" u-p="{{e}}"></doc-file><ss-two-alert class="r" u-r="ssAlert" u-i="904701f2-1" bind:__l="__l"></ss-two-alert></view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "资料库",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "doc-file": "../../components/docFile/docFile",
+    "ss-two-alert": "../../uni_modules/ss-components/components/ss-twoAlert/ss-twoAlert",
+    "bottom-more": "../../components/bottomMore/bottomMore",
+    "uni-fab": "../../uni_modules/uni-fab/components/uni-fab/uni-fab"
+  }
+}

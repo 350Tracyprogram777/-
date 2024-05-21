@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "设置用户信息",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ss-super-select-view": "../../uni_modules/ss-components/components/ss-superSelectView/ss-superSelectView"
+  }
+}

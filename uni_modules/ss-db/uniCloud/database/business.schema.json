@@ -1,0 +1,123 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"community_id": {
+			"bsonType": "string",
+			"title": "小区id",
+			"description": "小区id",
+			"foreignKey": "community._id"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"title": "用户id",
+			"description": "用户id",
+			"foreignKey": "uni-id-users._id"
+		},
+		"images": {
+			"bsonType": "array",
+			"title": "图片",
+			"componentForEdit": {
+				"name": "ss-upimage",
+				"props": {
+					"type": "通讯录",
+					":oneImg": true,
+					"maxCount": 1,
+					"style": "width:100px;height:100px",
+					"v-model:mediaArr": "formData.images"
+					
+				}
+			},
+			"componentForShow": {
+				"name": "ss-upimage",
+				"props": {
+					":stopDelete": true,
+					"type": "通讯录",
+					":oneImg": true,
+					"maxCount": 1,
+					"v-model:mediaArr": "formData.images",
+					"style": "width:100px;height:100px"
+
+				}
+			}
+		},
+		"sys_msg": {
+			"bsonType": "string",
+			"title": "系统信息",
+			"defaultValue": "",
+			"description": "停止出租,审核拒绝的备注信息"
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"defaultValue": "",
+			"description": "经营范围"
+		},
+		"title": {
+			"bsonType": "string",
+			"title": "标题",
+			"defaultValue": "",
+			"description": "xx超时"
+		},
+		"name": {
+			"bsonType": "string",
+			"title": "联系人",
+			"defaultValue": "",
+			"description": "xx"
+		},
+		"phone": {
+			"bsonType": "string",
+			"title": "联系电话",
+			"defaultValue": "",
+			"description": "联系电话"
+		},
+		"state": {
+			"bsonType": "int",
+			"title": "状态",
+			"description": "",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "正常",
+				"value": 0
+			}, {
+				"text": "未通过",
+				"value": 1
+			}]
+		},
+		"class": {
+			"bsonType": "string",
+			"title": "标签",
+			"description": "",
+			"defaultValue": 0,
+			"componentForEdit": {
+				"name": "uni-combox",
+				"props": {
+					"candidates": ["超市", "快递", "理发", "保健", "医药", "通信"]
+
+				}
+			},
+			"componentForShow": {
+				"name": "uni-combox",
+				"props": {
+					"candidates": ["超市", "快递", "理发", "保健", "医药", "通信"]
+
+				}
+			}
+
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间"
+		}
+	}
+}

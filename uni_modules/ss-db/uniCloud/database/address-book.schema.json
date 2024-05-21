@@ -1,0 +1,157 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"community_id": {
+			"bsonType": "string",
+			"title": "小区id",
+			"description": "小区id",
+			"foreignKey": "community._id"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"title": "用户id",
+			"description": "用户id",
+			"foreignKey": "uni-id-users._id"
+		},
+		"images": {
+			"bsonType": "array",
+			"title": "图片",
+			"componentForEdit": {
+				"name": "ss-upimage",
+				"props": {
+					"type": "通讯录",
+					":oneImg": true,
+					"maxCount": 1,
+					"style": "width:100px;height:100px",
+					":selectPop": "false"
+				}
+			},
+			"componentForShow": {
+				"name": "ss-upimage",
+				"props": {
+					":stopDelete": true,
+					"type": "通讯录",
+					":oneImg": true,
+					"maxCount": 1,
+					"v-model:mediaArr": "formData.images",
+					"style": "width:100px;height:100px"
+				}
+			}
+		},
+		"sys_msg": {
+			"bsonType": "string",
+			"title": "系统信息",
+			"defaultValue": "",
+			"description": ""
+		},
+		"name": {
+			"bsonType": "string",
+			"title": "标题",
+			"defaultValue": "",
+			"description": "xx小学"
+		},
+		"phone": {
+			"bsonType": "string",
+			"title": "手机号",
+			"defaultValue": "",
+			"description": ""
+		},
+		"other": {
+			"bsonType": "array",
+			"title": "电话",
+			"defaultValue": [],
+			"description": ""
+		},
+		"wx": {
+			"bsonType": "string",
+			"title": "微信",
+			"defaultValue": "",
+			"description": ""
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"defaultValue": "",
+			"description": "备注"
+		},
+		"address": {
+			"bsonType": "sting",
+			"title": "",
+			"description": "地址详情"
+		},
+		"address_name": {
+			"bsonType": "sting",
+			"title": "",
+			"description": "地址名字"
+		},
+		"gps": {
+			"bsonType": "",
+			"description": "出发地经纬度",
+			"properties": {
+				"latitude": {
+					"bsonType": "string",
+					"description": "经度"
+				},
+				"longitude": {
+					"bsonType": "string",
+					"description": "纬度"
+				}
+			}
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "排序",
+			"defaultValue": 1000
+		},
+		"open": {
+			"bsonType": "bool",
+			"title": "排序",
+			"description": "排序",
+			"defaultValue": true
+		},
+		"state": {
+			"bsonType": "int",
+			"title": "状态",
+			"description": "",
+			"defaultValue": 0,
+			"enum": [{
+				"text": "正常",
+				"value": 0
+			}, {
+				"text": "自己删除",
+				"value": 1
+			}, {
+				"text": "未通过",
+				"value": 30
+			}]
+		},
+		"category_id": {
+			"bsonType": "string",
+			"title": "分类id",
+			"description": "分类id",
+			"foreignKey": "sys-category._id"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间"
+		},
+		"cover": {
+			"bsonType": "string",
+			"title": "封面",
+			"description": "",
+			"defaultValue": "0"
+		}
+	}
+}

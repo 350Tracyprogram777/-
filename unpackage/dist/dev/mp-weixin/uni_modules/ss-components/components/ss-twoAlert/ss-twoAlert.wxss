@@ -1,0 +1,24 @@
+
+.twobt-cancle {
+	flex-grow: 1;
+	height: 80rpx;
+	border-radius: 40rpx;
+	text-align: center;
+	color: #fff;
+	line-height: 80rpx;
+	background: #bbbbbb;
+	border-radius: 40rpx;
+	margin-right: 10rpx;
+}
+.twobt-sure {
+	flex-grow: 1;
+	margin-left: 10rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
+	text-align: center;
+	color: #fff;
+	line-height: 80rpx;
+	/* 		background: #04A75D;
+ */
+	border-radius: 40rpx;
+}
